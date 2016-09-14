@@ -1,0 +1,201 @@
+body {
+    background: url(../img/background.jpg) repeat scroll;
+    /*repeat-x - Изображение повторяется по горизонтали */
+    /*scroll - Изображение прокручивается вместе со страницей*/
+}
+
+/*--------------
+Белая подложка
+--------------*/
+
+.white_main {
+    background-color: white;
+    width: 1000px;
+    margin: 30px auto 0 auto;
+    padding-top: 19px;
+    position: relative;
+    box-shadow: 0px 2px 12px #111111;
+}
+
+/*----------------
+Меню со значками
+----------------*/
+
+.contries{
+    list-style: none; /* прячем маркеры*/
+    position: absolute;
+    left: 320px;
+    top: 55px;
+    width: 340px;
+}
+.contries li{
+    float: left; /* выравниваем списки элементов в один ряд*/
+    margin-right: 0px; /* отсупы чтобы пункты меню не сливались*/
+}
+.contries li a {
+    display: block;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 10px;
+    padding-top: 50px; /* внутренний отступ чтобы текст был вне фона */
+    color: #128aa7;
+    background-position: center top; /* выравниваем фон вверх и по центру */
+    background-repeat: no-repeat;
+    width: 55px; /* размеры указываем чтобы картинки полностью отобразились */
+}
+* html .contries li a { /* хак для IE6, который иначе трактует блочную модель */
+    height: 150px;
+}
+
+.contries .india a {
+    background-image: url(../img/india.png);
+}
+.contries .nepal a {
+    background-image: url(../img/nepal.png);
+}
+.contries .tibet a {
+    background-image: url(../img/tibet.png);
+}
+.contries .bhutan a {
+    background-image: url(../img/bhutan.png);
+}
+.contries .sri-lanka a {
+    background-image: url(../img/sri-lanka.png);
+}
+.contries .maldives a {
+    background-image: url(../img/maldives.png);
+}
+.contries li a:hover {
+    color: #0000CC;
+}
+
+/*----------------------------------------
+Горизонтальное меню с выподающим списком
+----------------------------------------*/
+
+.navbar li:hover ul{
+    display: block
+}
+.navbar, .navbar ul{
+    list-style-type: none;
+    box-shadow: 0px 2px 7px #111111;
+}
+.navbar{
+    margin-bottom: 7px;
+    height: 30px;
+    background-color: #303030; /*Цвет меню*/
+    padding-left: 25px; /*Отступ первого элемента меню*/
+}
+.navbar ul {
+    display: none;
+    background-color: #464444; /*Цвет выподающего меню*/
+    position: absolute;
+    top: 100%;
+}
+.navbar li{
+    float: left;
+    position: relative;
+    height: 100%;
+    z-index: 10000;
+}
+
+.navbar li a {
+    display: block;
+    padding: 6px;
+    width: 120px; /*Ширина блока для текста*/
+    color: white; /*Цвет текста*/
+    text-decoration: none;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 10pt;
+}
+.navbar ul li {float: none}
+.navbar li:hover {background-color: #464444 } /*Цвет выделенного элемента в главном меню*/
+.navbar ul li:hover {background-color: #303030} /*Цвет выделенного элемента в подменю*/
+
+.sub-menu:after { /*Треугольник в меню*/
+    content: "\00a0" "\00a0" "\25BC"; /*escaped unicode for the down arrow*/
+    font-size: .6em;
+    color: white;
+}
+
+/*-------------------------
+Контент с тремя колонками
+-------------------------*/
+
+.contents{
+    overflow: hidden;
+}
+
+
+.fon3 {/* фон для правой колонки (зеленый) */
+    width: 100%;
+    background: #edeef0;
+    float: left;
+}
+.fon2 {/* фон для центральной колонки (красный) */
+    width: 100%;
+    float: left;
+    position: relative;
+    right: 21%;
+    background-color: white;
+    border-right: 1px solid darkgrey;
+}
+.fon1 {  /* фон для левой колонки (синий) */
+    width: 100%;
+    background: #edeef0;
+    float: left; /* делаем все обертки плавающими блоками чтобы избежать добавления блока с clear: both; */
+    position: relative; /* чтобы иметь возможность сместить фон */
+    right: 58%;
+    border-right: 1px solid darkgrey;
+}
+.leftColumn {
+    width: 21%;
+    float: left;
+    overflow: hidden; /* страховка от ломки верстки объектами шире размера колонки-родителя */
+    position: relative;
+    left: 79%; /* возвращаем колонки с контентом на свои позиции. 70% - сумма смещений оберток fon1 и fon2 */
+}
+.centerColumn {
+    width: 58%;
+    float: left;
+    overflow: hidden; /* страховка от ломки верстки объектами шире размера колонки-родителя */
+    position:relative;
+    left: 79%;
+}
+.rightColumn {
+    width: 21%;
+    float: left;
+    overflow: hidden;
+    position:relative;
+    left: 79%;
+}
+
+.THead {
+    font-family: Tahoma;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    color: #424c43;
+}
+.TColumn {
+    font-family: Tahoma;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.5;
+    color: #424c43;
+}
+
+/*------
+FOOTER
+------*/
+
+.footer{
+    line-height: 30px;
+    background-color: transparent;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 12px;
+    color: white;
+}
+
