@@ -1,5 +1,5 @@
 body {
-    background: url(../img/background.jpg) repeat scroll;
+    background: url(../img/background.jpg) repeat-x #0c739f scroll;
     /*repeat-x - Изображение повторяется по горизонтали */
     /*scroll - Изображение прокручивается вместе со страницей*/
 }
